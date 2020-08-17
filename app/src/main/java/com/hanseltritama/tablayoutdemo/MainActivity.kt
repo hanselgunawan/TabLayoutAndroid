@@ -36,4 +36,16 @@ class MainActivity : AppCompatActivity() {
         pagerAdapter.addTitle("THREE", R.drawable.ic_three)
         viewPager.adapter = pagerAdapter
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("POSITION", tabs_main.selectedTabPosition)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        viewpager_main.currentItem = savedInstanceState.getInt("POSITION")
+    }
+
+
 }
