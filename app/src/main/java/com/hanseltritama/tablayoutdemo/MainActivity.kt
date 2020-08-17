@@ -23,17 +23,17 @@ class MainActivity : AppCompatActivity() {
         setupTabIcons()
     }
 
-    fun setupTabIcons() {
+    private fun setupTabIcons() {
         tabs_main.getTabAt(0)?.setIcon(R.drawable.ic_one)
         tabs_main.getTabAt(1)?.setIcon(R.drawable.ic_two)
         tabs_main.getTabAt(2)?.setIcon(R.drawable.ic_three)
     }
 
     fun setupViewPager(viewPager: ViewPager) {
-        pagerAdapter = MyPagerAdapter(supportFragmentManager)
-        pagerAdapter.addTitle("ONE")
-        pagerAdapter.addTitle("TWO")
-        pagerAdapter.addTitle("THREE")
+        pagerAdapter = MyPagerAdapter(supportFragmentManager, this)
+        pagerAdapter.addTitle("ONE", R.drawable.ic_one)
+        pagerAdapter.addTitle("TWO", R.drawable.ic_two)
+        pagerAdapter.addTitle("THREE", R.drawable.ic_three)
         viewPager.adapter = pagerAdapter
     }
 }
