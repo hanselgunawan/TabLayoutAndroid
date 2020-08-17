@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentPagerAdapter
 
 class MyPagerAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager) {
 
+    private var tabTitle: ArrayList<String> = arrayListOf()
+
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> {
@@ -22,12 +24,20 @@ class MyPagerAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fr
         return 3
     }
 
+    fun addTitle(str: String) {
+        tabTitle.add(str)
+    }
+
     override fun getPageTitle(position: Int): CharSequence? {
-        return when (position) {
-            0 -> "First Tab"
-            1 -> "Second Tab"
-            else -> "Third Tab"
-        }
+//        return when (position) {
+//            0 -> "First Tab"
+//            1 -> "Second Tab"
+//            else -> "Third Tab"
+//        }
+
+        return tabTitle[position]
+
+//        return null
     }
 
 }
