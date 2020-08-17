@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // setup ViewPager
+        // setup ViewPager adapter
         setupViewPager(viewpager_main)
 
         // setup TabLayout
@@ -23,18 +23,18 @@ class MainActivity : AppCompatActivity() {
         setupTabIcons()
     }
 
-    private fun setupTabIcons() {
-        tabs_main.getTabAt(0)?.setIcon(R.drawable.ic_one)
-        tabs_main.getTabAt(1)?.setIcon(R.drawable.ic_two)
-        tabs_main.getTabAt(2)?.setIcon(R.drawable.ic_three)
-    }
-
-    fun setupViewPager(viewPager: ViewPager) {
+    private fun setupViewPager(viewPager: ViewPager) {
         pagerAdapter = MyPagerAdapter(supportFragmentManager, this)
         pagerAdapter.addTitle("ONE", R.drawable.ic_one)
         pagerAdapter.addTitle("TWO", R.drawable.ic_two)
         pagerAdapter.addTitle("THREE", R.drawable.ic_three)
         viewPager.adapter = pagerAdapter
+    }
+
+    private fun setupTabIcons() {
+        tabs_main.getTabAt(0)?.setIcon(R.drawable.ic_one)
+        tabs_main.getTabAt(1)?.setIcon(R.drawable.ic_two)
+        tabs_main.getTabAt(2)?.setIcon(R.drawable.ic_three)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
