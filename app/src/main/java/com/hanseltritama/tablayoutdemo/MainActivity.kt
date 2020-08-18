@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
         pagerAdapter.addTitle("ONE", R.drawable.ic_one)
         pagerAdapter.addTitle("TWO", R.drawable.ic_two)
         pagerAdapter.addTitle("THREE", R.drawable.ic_three)
+        viewPager.clipToPadding = false
+        viewPager.setPadding(24, 0, 12, 0)
+        viewPager.pageMargin = 12
         viewPager.adapter = pagerAdapter
     }
 

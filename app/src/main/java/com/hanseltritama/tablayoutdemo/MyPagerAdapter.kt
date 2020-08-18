@@ -58,4 +58,8 @@ class MyPagerAdapter(fragmentManager: FragmentManager, context: Context) : Smart
 //        return null
     }
 
+    override fun getPageWidth(position: Int): Float {
+        return 0.93f
+    }
+
 }
