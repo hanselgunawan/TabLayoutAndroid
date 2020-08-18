@@ -7,14 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.tabs.TabLayout
+    <me.relex.circleindicator.CircleIndicator
         android:id="@+id/tabs_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/customTabLayout"
-        app:tabMode="fixed"
-        app:tabSelectedTextColor="@android:color/holo_red_dark"
-        tools:ignore="MissingConstraints"/>
+        android:layout_height="48dp"
+        app:ci_drawable="@drawable/black_radius"
+        tools:ignore="MissingConstraints" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager_main"
