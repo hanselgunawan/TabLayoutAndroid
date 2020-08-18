@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         tabs_main.setupWithViewPager(viewpager_main)
 
         // setup tab icons
-//        setupTabIcons()
+        setupTabIcons()
     }
 
     private fun setupViewPager(viewPager: ViewPager) {
