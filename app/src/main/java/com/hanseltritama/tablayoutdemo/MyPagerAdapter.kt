@@ -48,12 +48,14 @@ class MyPagerAdapter(fragmentManager: FragmentManager, context: Context) : Smart
         // mContext.resources.getDrawable()
         // -------------------------------
 
-        val image: Drawable = ContextCompat.getDrawable(mContext, imageArray[position])!!
-        image.setBounds(0,0, image.intrinsicWidth, image.intrinsicHeight)
-        val sb = SpannableString("  " + tabTitle[position])
-        val imageSpan = ImageSpan(image, ImageSpan.ALIGN_BOTTOM)
-        sb.setSpan(imageSpan, 0,1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-        return sb
+//        val image: Drawable = ContextCompat.getDrawable(mContext, imageArray[position])!!
+//        image.setBounds(0,0, image.intrinsicWidth, image.intrinsicHeight)
+//        val sb = SpannableString("  " + tabTitle[position])
+//        val imageSpan = ImageSpan(image, ImageSpan.ALIGN_BOTTOM)
+//        sb.setSpan(imageSpan, 0,1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+//        return sb
+
+        return tabTitle[position]
 
 //        return null
     }

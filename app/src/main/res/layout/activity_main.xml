@@ -7,14 +7,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.tabs.TabLayout
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:id="@+id/tabs_main"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        style="@style/customTabLayout"-->
+<!--        app:tabMode="fixed"-->
+<!--        app:tabSelectedTextColor="@android:color/holo_red_dark"-->
+<!--        tools:ignore="MissingConstraints"/>-->
+
+    <github.chenupt.springindicator.SpringIndicator
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:siTextSize="12sp"
+        app:siTextColor="@color/colorPrimaryDark"
+        app:siSelectedTextColor="@android:color/white"
+        app:siIndicatorColor="@color/colorPrimary"
         android:id="@+id/tabs_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/customTabLayout"
-        app:tabMode="fixed"
-        app:tabSelectedTextColor="@android:color/holo_red_dark"
-        tools:ignore="MissingConstraints"/>
+        android:layout_height="56dp"
+        tools:ignore="MissingConstraints" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager_main"
