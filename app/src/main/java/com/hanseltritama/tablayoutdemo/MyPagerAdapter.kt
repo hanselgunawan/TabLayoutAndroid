@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 
-class MyPagerAdapter(fragmentManager: FragmentManager, context: Context) : FragmentPagerAdapter(fragmentManager) {
+class MyPagerAdapter(fragmentManager: FragmentManager, context: Context) : SmartFragmentStatePagerAdapter(fragmentManager) {
 
     private var tabTitle: ArrayList<String> = arrayListOf()
     private var imageArray: ArrayList<Int> = arrayListOf()

@@ -1,5 +1,9 @@
 package com.hanseltritama.tablayoutdemo
 
+/**************
+ Source: https://gist.githubusercontent.com/nesquena/c715c9b22fb873b1d259/raw/78b5905518764099349f4ab3e813c22780fca4a3/SmartFragmentStatePagerAdapter.java
+**************/
+
 import android.util.SparseArray
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
